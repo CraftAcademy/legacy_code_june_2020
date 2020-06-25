@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
+<<<<<<< HEAD
 
 gem 'rails', '5.1.5'
+=======
+>>>>>>> 55c2f82e8aa26a4e525d709eaa792f81a930a5fc
 
 gem 'bootstrap-sass'
 gem 'chosen-rails'
@@ -16,8 +19,16 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-group :development do
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
+  gem 'capybara'
   gem 'pry-byebug'
+  gem 'coveralls', require: false
+end
+
+group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'capybara'

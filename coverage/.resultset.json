@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/models/user.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/models/user.rb": [
         1,
         null,
         null,
@@ -33,12 +33,12 @@
         null,
         null
       ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/models/application_record.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/helpers/application_helper.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/helpers/application_helper.rb": [
         1,
         1,
         1,
@@ -48,25 +48,27 @@
         0,
         null,
         null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/helpers/mailbox_helper.rb": [
-        1,
         1,
         0,
         null,
         null
       ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/controllers/welcome_controller.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/helpers/mailbox_helper.rb": [
+        1,
+        1,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/controllers/application_controller.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -87,12 +89,12 @@
         1,
         null,
         1,
-        10,
-        10,
+        4,
+        4,
         null,
         null
       ],
-      "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/controllers/mailbox_controller.rb": [
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/controllers/mailbox_controller.rb": [
         0,
         0,
         null,
@@ -112,7 +114,11 @@
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/simaboreiri/boot_camp/legacy_code_june_2020/app/controllers/conversations_controller.rb": [
+=======
+      "/Users/Viktor/CraftAcademy/legacy_code_june_2020/app/controllers/conversations_controller.rb": [
+>>>>>>> 55c2f82e8aa26a4e525d709eaa792f81a930a5fc
         0,
         0,
         null,
@@ -128,6 +134,10 @@
         null,
         0,
         0,
+<<<<<<< HEAD
+=======
+        null,
+>>>>>>> 55c2f82e8aa26a4e525d709eaa792f81a930a5fc
         0,
         0,
         null,
@@ -160,6 +170,10 @@
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1593090312
+=======
+    "timestamp": 1593086556
+>>>>>>> 55c2f82e8aa26a4e525d709eaa792f81a930a5fc
   }
 }
