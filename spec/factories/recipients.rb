@@ -1,5 +1,5 @@
 FactoryBot.define do
-    factory :recipients do
+    factory :recipient do
         name { 'Name'}
     end
 end

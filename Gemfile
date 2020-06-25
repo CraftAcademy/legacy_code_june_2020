@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
-<<<<<<< HEAD
-
-gem 'rails', '5.1.5'
-=======
->>>>>>> 55c2f82e8aa26a4e525d709eaa792f81a930a5fc
 
 gem 'bootstrap-sass'
 gem 'chosen-rails'

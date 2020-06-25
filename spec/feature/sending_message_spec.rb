@@ -3,7 +3,7 @@ require "rails_helper"
 feature 'User can send a message' do
     context 'Compose a message'
     before do
-        create(:user, email: 'user@mail.com', password: '12345678')
+        create(:user, email: 'user@mail.com', password: '12345678', name: "Simon")
         visit root_path
         click_on 'Login'
         fill_in "Email", :with => "user@mail.com"
@@ -11,8 +11,8 @@ feature 'User can send a message' do
         click_on "Log in"
         click_on "Inbox"
         click_on "Compose"
-        create(:recipients, name: 'Alex')
-        select "Alex", :from => "Recipients"
+        #create(:user, name: 'Simon')
+        select "Simon", :from => "Recipients"
         fill_in "Subject", :with => "Test"
         fill_in "Message", :with => "This is a test message."
         click_on "Send Message"
