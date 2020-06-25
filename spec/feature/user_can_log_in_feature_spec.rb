@@ -4,33 +4,31 @@ feature 'User can log in' do
     context 'Sign in to account'
     before do
       create(:user, email: 'user@mail.com', password: '12345678')  
-        visit user_session_path
-end
+      visit user_session_path
+    end
 
     it 'displays a log in button' do
-        expect(page).to have_content 'Login'
-        click_on 'Login'
+      expect(page).to have_content 'Login'
+      click_on 'Login'
     end
 
     it 'displays a email form' do
-        expect(page).to have_content 'Email'    
+      expect(page).to have_content 'Email'    
     end
 
     it 'fills in email and password' do
         fill_in "Email", :with => 'user@mail.com'
         fill_in "Password", :with => '12345678'
         click_on "Log in"
-            expect(page).to have_content 'Signed in successfully.'
+          expect(page).to have_content 'Signed in successfully.'
     end
 
-    it 'If no email or password is entered' do
-    fill_in 'Email', :with => ''
-    fill_in 'Password', :with => ''
+    it 'If the email format is incorrect or the password is too short' do
+    fill_in 'Email', :with => '&5aygde'
+    fill_in 'Password', :with => '22'
     click_on 'Log in'
-        expect(page).to have_content 'Invalid Email or password.'
+      expect(page).to have_content 'Invalid Email or password.'
     end
-
-
 end
 
 
