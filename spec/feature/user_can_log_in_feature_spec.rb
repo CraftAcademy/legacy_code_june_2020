@@ -1,0 +1,50 @@
+require "rails_helper"
+
+feature 'User can log in' do
+    context 'Sign in to account'
+    before do
+      create(:user, email: 'user@mail.com', password: '12345678')  
+      visit user_session_path
+    end
+
+    it 'displays a log in button' do
+      expect(page).to have_content 'Login'
+      click_on 'Login'
+    end
+
+    it 'displays a email form' do
+      expect(page).to have_content 'Email'    
+    end
+
+    it 'fills in email and password' do
+        fill_in "Email", :with => 'user@mail.com'
+        fill_in "Password", :with => '12345678'
+        click_on "Log in"
+          expect(page).to have_content 'Signed in successfully.'
+    end
+
+    it 'If the email format is incorrect' do
+    fill_in 'Email', :with => '&5aygde'
+    fill_in 'Password', :with => '12345678'
+    click_on 'Log in'
+      expect(page).to have_content 'Invalid Email or password.'
+    end
+
+    
+    it 'If the password is incorrect' do
+      fill_in 'Email', :with => 'user@mail.com'
+      fill_in 'Password', :with => '2234'
+      click_on 'Log in'
+        expect(page).to have_content 'Invalid Email or password.'
+    end
+    
+    
+    it 'If the password is too short' do
+      fill_in 'Email', :with => '&5aygde'
+      fill_in 'Password', :with => '11'
+      click_on 'Log in'
+        expect(page).to have_content 'Invalid Email or password.'
+    end
+end
+
+
