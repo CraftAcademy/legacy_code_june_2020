@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature 'User can log in' do
-    context 'Sign in to account'
+	context 'Sign in to account'
     before do
       create(:user, email: 'user@mail.com', password: '12345678')  
       visit user_session_path
@@ -17,16 +17,16 @@ feature 'User can log in' do
     end
 
     it 'fills in email and password' do
-        fill_in "Email", :with => 'user@mail.com'
-        fill_in "Password", :with => '12345678'
-        click_on "Log in"
-          expect(page).to have_content 'Signed in successfully.'
+      fill_in "Email", :with => 'user@mail.com'
+      fill_in "Password", :with => '12345678'
+      click_on "Log in"
+      expect(page).to have_content 'Signed in successfully.'
     end
 
     it 'If the email format is incorrect' do
-    fill_in 'Email', :with => '&5aygde'
-    fill_in 'Password', :with => '12345678'
-    click_on 'Log in'
+    	fill_in 'Email', :with => '&5aygde'
+    	fill_in 'Password', :with => '12345678'
+    	click_on 'Log in'
       expect(page).to have_content 'Invalid Email or password.'
     end
 
@@ -35,15 +35,15 @@ feature 'User can log in' do
       fill_in 'Email', :with => 'user@mail.com'
       fill_in 'Password', :with => '2234'
       click_on 'Log in'
-        expect(page).to have_content 'Invalid Email or password.'
+      expect(page).to have_content 'Invalid Email or password.'
     end
     
     
     it 'If the password is too short' do
       fill_in 'Email', :with => '&5aygde'
-      fill_in 'Password', :with => '11'
+      fill_in 'Password', :with => '123'
       click_on 'Log in'
-        expect(page).to have_content 'Invalid Email or password.'
+      expect(page).to have_content 'Invalid Email or password.'
     end
 end
 
